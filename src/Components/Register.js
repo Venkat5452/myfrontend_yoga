@@ -117,7 +117,7 @@ function Register() {
         })
     }
   return (
-    <div className='border border-dark container mt-4 w-50 rounded-4 backss'>
+    <div className='container d-flex align-items-center justify-content-center w-50 rounded-4 backss'>
         <div className="p-2 w-75 mx-auto">
             <h3 className="w-30"><h3 className="text-success">🧘‍♂️ YOGA 🧘‍♀️</h3>Registration Form</h3>
             <Image src={img} alt="im" className="w-75 h-50 p-1 rounded-4"></Image>

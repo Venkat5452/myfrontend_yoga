@@ -1,4 +1,11 @@
 .backss{
-    background-color: #E8E8E8;
-    min-width: 260px;
+    background-color:#FFD1EB;
+    min-width: 100%;
+    min-height: 100%;
+}
+body{
+    height: 100vh;
+} 
+.container{
+    height: 100%;
 }
