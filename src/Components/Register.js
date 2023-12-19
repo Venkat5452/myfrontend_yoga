@@ -134,12 +134,10 @@ function Register() {
             let currentDate = new Date().toJSON().slice(0, 7);
             user.day=currentDate;
             axios.post(BASE_URL+"/details",user).then((res)=>{
-            console.log(res);
             sdata(res.data.message);
-            console.log(data);
         })
         }
-    })
+    },[flagd,data,user])
   return (
     <div className='container d-flex align-items-center justify-content-center w-50 rounded-4 backss'>
         <div className="p-2 w-75 mx-auto">
