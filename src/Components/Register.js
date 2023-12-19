@@ -148,7 +148,7 @@ function Register() {
             {flagl && <h6 className="text-success">Loading..</h6>}
             <div> 
             {!flag1 && !flag2 && (<div>
-                <h6 className="text-primary">Number of Registrations in this month : {data}</h6>
+                {data!==0 && <h6 className="text-primary">Number of Registrations in this month : {data}</h6>}
                 <Form onSubmit={verifyemail}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Control
