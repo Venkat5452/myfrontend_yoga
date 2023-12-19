@@ -34,4 +34,7 @@ How it Works :
 7) User can choose any of the options whether to pay now or pay later.![Screenshot (135)](https://github.com/Venkat5452/myfrontend_yoga/assets/106301959/e8db1c27-2638-4ef6-b341-c0f854d6f2fc)
 
 8) "Registration completed succesfully" will be displayed and user details being entered into the database.![Screenshot (136)](https://github.com/Venkat5452/myfrontend_yoga/assets/106301959/f42f1c84-b6f1-44f2-b1ad-a3bbff0c69eb)
- 
+
+Improvements:
+
+![image](https://github.com/Venkat5452/myfrontend_yoga/assets/106301959/cec2b624-5b64-4a4b-b90d-f8e7ef9dee65)
