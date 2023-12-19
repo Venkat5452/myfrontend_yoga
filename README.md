@@ -10,6 +10,18 @@ BackEnd  : MongoDB,Nodejs,Expressjs.
 
 Website Link : https://myyogawebsite.netlify.app
 
+Assumptions:
+1. User can only Register only once in a month.
+2. User age should be between 18-65
+3. User Will only can register if he/she made payment for his/her last registration or its his/her new registration.
+4. User being identified by email.
+
+
+Here is the ER Diagram of the Database (MongoDB):
+
+![image](https://github.com/Venkat5452/myfrontend_yoga/assets/106301959/f59fca56-a030-4194-91cd-cd1fb48e040e)
+
+
 How it Works :
 1) User will be asked to Enter His/Her details(Name and Email). ![Screenshot (138)](https://github.com/Venkat5452/myfrontend_yoga/assets/106301959/a0e4f89f-61e5-4e0d-a0db-396e0a472b60)
 
@@ -24,12 +36,3 @@ How it Works :
 
 8) Registration completed succesfully will be displayed and user details being entered into the database.![Screenshot (136)](https://github.com/Venkat5452/myfrontend_yoga/assets/106301959/f42f1c84-b6f1-44f2-b1ad-a3bbff0c69eb)
  
-Assumptions:
-1. User can only Register only once in a month.
-2. User age should be between 18-65
-3. User Will only can register if he/she made payment for his/her last registration or its his/her new registration.
-4. User uniqueness being identified by email.
-
-Here is the ER Diagram of the Database (MongoDB):
-
-![image](https://github.com/Venkat5452/myfrontend_yoga/assets/106301959/f59fca56-a030-4194-91cd-cd1fb48e040e)
