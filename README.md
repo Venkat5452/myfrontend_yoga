@@ -12,7 +12,7 @@ Website Link : https://myyogawebsite.netlify.app
 
 Assumptions:
 1. User can only Register once in a month.
-2. User Will only can register if he/she made payment for his/her last registration or its his/her new registration.
+2. If a registered user for the current month tries to register again for the same month, then an error message showing details is displayed.
 3. User being identified by email.
 
 
