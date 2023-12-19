@@ -144,8 +144,8 @@ function Register() {
         <div className="p-2 w-75 mx-auto">
             <h3 className="w-30"><h3 className="text-success">🧘‍♂️ YOGA 🧘‍♀️</h3>Registration Form</h3>
             <Image src={img} alt="im" className="w-75 h-50 p-1 rounded-4"></Image>
-            {err!=="" && <h5 className="text-danger">{err}</h5>}
-            {flagl && <h5 className="text-success">Loading..</h5>}
+            {err!=="" && !flag1 && <h5 className="text-danger">{err}</h5>}
+            {flagl && <h6 className="text-success">Loading..</h6>}
             <div> 
             {!flag1 && !flag2 && (<div>
                 <h6 className="text-primary">Number of Registrations in this month : {data}</h6>
