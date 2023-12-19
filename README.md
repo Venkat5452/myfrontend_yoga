@@ -38,3 +38,6 @@ How it Works :
 Improvements:
 
 ![image](https://github.com/Venkat5452/myfrontend_yoga/assets/106301959/cec2b624-5b64-4a4b-b90d-f8e7ef9dee65)
+1. Batch wise Data for Number of registrations done in the current month can show using data visualization (Pie Chart).
+2. Email and Mobile Number verification can be implemented.
+3. Email can be sent Everyday to the user like an alarm, if user chooses to notify him/her.
