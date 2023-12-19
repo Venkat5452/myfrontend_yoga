@@ -11,10 +11,9 @@ BackEnd  : MongoDB,Nodejs,Expressjs.
 Website Link : https://myyogawebsite.netlify.app
 
 Assumptions:
-1. User can only Register only once in a month.
-2. User age should be between 18-65
-3. User Will only can register if he/she made payment for his/her last registration or its his/her new registration.
-4. User being identified by email.
+1. User can only Register only for the month.
+2. User Will only can register if he/she made payment for his/her last registration or its his/her new registration.
+3. User being identified by email.
 
 
 Here is the ER Diagram of the Database (MongoDB):
