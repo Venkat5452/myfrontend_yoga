@@ -82,7 +82,7 @@ function Register() {
     const makepayment=(e)=>{
         e.preventDefault();
         user.paymentstatus="Yes";
-        if(pattern.test(user.Phone) && (user.Age >=18 && user.Age <=65)&& slott!=="Select") {
+        if(pattern.test(user.Phone) && (user.Age >=18 && user.Age <=65)&& slott!=="Select" && slott!=="") {
             user.slottime=slott;
             setflagl(true);
             axios.post(BASE_URL + "/register" , user).then((res)=>{
@@ -99,7 +99,7 @@ function Register() {
     const makepayment2=(e)=>{
         e.preventDefault();
         user.paymentstatus="No";
-        if(pattern.test(user.Phone) && (user.Age >=18 && user.Age <=65) && slott!=="Select") {
+        if(pattern.test(user.Phone) && (user.Age >=18 && user.Age <=65) && slott!=="Select" && slott!=="") {
             setflagl(true);
             user.slottime=slott;
             axios.post(BASE_URL + "/register" , user).then((res)=>{
@@ -211,8 +211,8 @@ function Register() {
                 />
                 </Form.Group>
                 <Form.Group className="">
-                    <label className="myDropDown" ><h5>Select Slot</h5></label>
-                    <select className="w-100 p-1 rounded" onChange={(e) => (setslott(e.target.value))}>
+                    <label className="myDropDown" ><h4>Select Slot</h4></label>
+                    <select className="w-75 p-1 rounded" onChange={(e) => (setslott(e.target.value))}>
                         <option defaultValue={""}>Select</option>
                         {availableTimeSlots.map(fbb =><option className="bg-success" key={fbb.key} value={fbb}>{fbb}</option>)};
                         </select>
