@@ -25,7 +25,7 @@ How it Works :
 1) User will be asked to Enter His/Her details(Name and Email). ![Screenshot (138)](https://github.com/Venkat5452/myfrontend_yoga/assets/106301959/a0e4f89f-61e5-4e0d-a0db-396e0a472b60)
 
 2) Number of users registered in the current month being displayed to help both admin and users. 
-3) If user registered Earlier "In the same Month " error message will be Displayed (Since only once a user can Register).![Screenshot (137)](https://github.com/Venkat5452/myfrontend_yoga/assets/106301959/9f0b49bd-73b0-4e87-bacd-e5aaf7e94a89)
+3) If a registered user for the current month tries to register again for the same month, then an error message showing details is displayed.![Screenshot (137)](https://github.com/Venkat5452/myfrontend_yoga/assets/106301959/9f0b49bd-73b0-4e87-bacd-e5aaf7e94a89)
 4) If user not registered in the current month it will be checked if he/she paid the last registration payment. if payed will redirect to book for the current month else will be asked to pay for the last month registration to continue registration for this month.![Screenshot (131)](https://github.com/Venkat5452/myfrontend_yoga/assets/106301959/21da57a4-4e78-4672-8482-70c8525117c6)
 
 5) If User not at all registered once will directly to the Slotbooking page.![Screenshot (134)](https://github.com/Venkat5452/myfrontend_yoga/assets/106301959/25317325-b88a-4523-a5e3-d494730c3cf5)
