@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Form} from "react-bootstrap";
 import { Button ,Image} from "react-bootstrap";
 import axios from "axios";
@@ -9,12 +9,14 @@ import Confetti from "react-confetti";
 import useWindowSize from "react-use/lib/useWindowSize";
 import "animate.css";
 import img from './Images/img.jpg'
-
+// import { Chart } from "react-google-charts";
 function Register() {
     const [slott,setslott]=useState("");
     const [flag1,setflag1]=useState(false);
     const [flag2,setflag2]=useState(false);
     const [flag3,setflag3]=useState(false);
+    const [flagd,setflagd]=useState(false);
+    const [data,sdata]=useState(0);
     const [err,seterr]=useState("");
     const [flagl,setflagl]=useState(false);
     const [user,SetUser]=useState({
@@ -26,11 +28,21 @@ function Register() {
         day:"",
         paymentstatus:""
     });
+    // const data = [
+    //     ["Task", "Hours per Day"],
+    //     ["6:00--7:00 AM", 0],
+    //     ["7:00--8:00 AM", 0],
+    //     ["8:00--9:00 AM", 0],
+    //     ["5:00--6:00 PM", 0]
+    //   ];
+    // const options = {
+    //     title: "This Month Slot Bookings",
+    //   };
     const [availableTimeSlots,setavailableTimeSlots]=useState([
-        "6:00 AM -- 7:00 AM",
-        "7:00 AM -- 8:00 AM",
-        "8:00 AM -- 9:00 AM",
-        "5:00 PM -- 6:00 PM"
+        "6:00--7:00 AM",
+        "7:00--8:00 AM",
+        "8:00--9:00 AM",
+        "5:00--6:00 PM"
       ])
       const { width, height } = useWindowSize();
     const handleSubmit = async (e) => {
@@ -60,7 +72,7 @@ function Register() {
                 seterr("Payment Pending")
               }
               else {
-                seterr("Email Already Registered in " + res.data.slot + " Slot ");
+                seterr("Email Already Registered in this month at " + res.data.slot + " Slot ");
               }
               setflagl(false);
             })
@@ -116,6 +128,18 @@ function Register() {
             setflagl(false);
         })
     }
+    useEffect(()=>{
+        if(flagd===false) {
+            setflagd(true);
+            let currentDate = new Date().toJSON().slice(0, 7);
+            user.day=currentDate;
+            axios.post(BASE_URL+"/details",user).then((res)=>{
+            console.log(res);
+            sdata(res.data.message);
+            console.log(data);
+        })
+        }
+    })
   return (
     <div className='container d-flex align-items-center justify-content-center w-50 rounded-4 backss'>
         <div className="p-2 w-75 mx-auto">
@@ -125,6 +149,7 @@ function Register() {
             {flagl && <h5 className="text-success">Loading..</h5>}
             <div> 
             {!flag1 && !flag2 && (<div>
+                <h6 className="text-primary">Number of Registrations in this month : {data}</h6>
                 <Form onSubmit={verifyemail}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Control
@@ -150,6 +175,14 @@ function Register() {
                     <Button variant="primary" type="Submit" onSubmit={verifyemail}>Confirm</Button>
                 </div>
                 </Form>
+                {/* <div className="d-flex align-items-center justify-content-center mt-1">
+                <Chart
+                chartType="PieChart"
+                data={data}
+                width={"30vh"}
+                height={"15vh"}
+                options={options}/>
+                </div> */}
                 </div>)}
                 {flag1 && !flag2 && (<div>
                     <Confetti width={width} height={height} numberOfPieces={30}/>
