@@ -28,12 +28,12 @@ function Register() {
         day:"",
         paymentstatus:""
     });
-    // const data = [
+    // const data1 = [
     //     ["Task", "Hours per Day"],
-    //     ["6:00--7:00 AM", 0],
-    //     ["7:00--8:00 AM", 0],
-    //     ["8:00--9:00 AM", 0],
-    //     ["5:00--6:00 PM", 0]
+    //     ["6:00--7:00 AM", 1],
+    //     ["7:00--8:00 AM", 3],
+    //     ["8:00--9:00 AM", 2],
+    //     ["5:00--6:00 PM", 5]
     //   ];
     // const options = {
     //     title: "This Month Slot Bookings",
@@ -57,6 +57,7 @@ function Register() {
         const pattern = new RegExp(/^\d{1,10}$/);
     const verifyemail=(e)=>{
         e.preventDefault();
+        setflag3(false);
         let currentDate = new Date().toJSON().slice(0, 7);
         user.day=currentDate;
         if(user.day) {
@@ -176,8 +177,8 @@ function Register() {
                 {/* <div className="d-flex align-items-center justify-content-center mt-1">
                 <Chart
                 chartType="PieChart"
-                data={data}
-                width={"30vh"}
+                data={data1}
+                width={"100%"}
                 height={"15vh"}
                 options={options}/>
                 </div> */}
