@@ -211,7 +211,7 @@ function Register() {
                 />
                 </Form.Group>
                 <Form.Group className="">
-                    <label className="myDropDown" ><h4>Select Slot</h4></label>
+                    <label className="myDropDown" ><h4 className="pe-1">Batch </h4></label>
                     <select className="w-75 p-1 rounded" onChange={(e) => (setslott(e.target.value))}>
                         <option defaultValue={""}>Select</option>
                         {availableTimeSlots.map(fbb =><option className="bg-success" key={fbb.key} value={fbb}>{fbb}</option>)};
