@@ -1,10 +1,11 @@
 Website : Yoga Registration Form
 
 FrontEnd : https://github.com/Venkat5452/myfrontend_yoga
+
 BackEnd : https://github.com/Venkat5452/mybackend_yoga
 
-Tech Stack : 
 FrontEnd : Reactjs,Bootstrap,Css
+
 BackEnd  : MongoDB,Nodejs,Expressjs.
 
 Website Link : https://myyogawebsite.netlify.app
