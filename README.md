@@ -4,9 +4,9 @@ FrontEnd : https://github.com/Venkat5452/myfrontend_yoga
 
 BackEnd : https://github.com/Venkat5452/mybackend_yoga
 
-FrontEnd : Reactjs,Bootstrap,Css
-
-BackEnd  : MongoDB,Nodejs,Expressjs.
+TechStack :
+1. FrontEnd : Reactjs,Bootstrap,Css.
+2. BackEnd  : MongoDB,Nodejs,Expressjs.
 
 Website Link : https://myyogawebsite.netlify.app
 
